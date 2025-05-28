@@ -2,79 +2,32 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Startpagina</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      background-color: #121212;
-      color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 40px 20px;
-    }
-
-    h1 {
-      font-size: 2rem;
-      font-weight: 300;
-      margin-bottom: 10px;
-    }
-
-    p {
-      color: #aaaaaa;
-      margin-bottom: 40px;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      max-width: 600px;
-      width: 100%;
-    }
-
-    li {
-      margin: 15px 0;
-    }
-
-    a {
-      display: block;
-      text-decoration: none;
-      color: #ffffff;
-      background-color: #1e1e1e;
-      padding: 15px 20px;
-      border-radius: 12px;
-      font-size: 1.1rem;
-      transition: background-color 0.3s, transform 0.2s;
-    }
-
-    a:hover {
-      background-color: #2a2a2a;
-      transform: scale(1.02);
-    }
-
-    footer {
-      margin-top: auto;
-      color: #555;
-      font-size: 0.9rem;
-      padding: 40px 0 10px;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Polestar Startpagina</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Welkom</h1>
-  <p>Jouw persoonlijke startpagina</p>
+  <div class="topbar">
+    <div class="icon active">🚗</div>
+    <div class="icon">🧭</div>
+    <div class="icon">🔌</div>
+    <div class="icon">⚙️</div>
+    <div class="time">10:15</div>
+  </div>
 
-  <ul>
-    <li><a href="https://www.nu.nl" target="_blank">NU.nl – Nieuws</a></li>
-    <li><a href="https://www.gmail.com" target="_blank">Gmail</a></li>
-    <li><a href="https://calendar.google.com" target="_blank">Google Agenda</a></li>
-    <!-- Voeg hier je eigen links toe -->
-  </ul>
+  <div class="container">
+    <h1>Welkom</h1>
+    <p class="subtitle">Jouw persoonlijke startpagina in Polestar-stijl</p>
 
-  <footer>
-    Gemaakt voor jouw Polestar browser
-  </footer>
+    <ul class="links">
+      <li><a href="https://www.nu.nl" target="_blank">NU.nl – Nieuws</a></li>
+      <li><a href="https://www.gmail.com" target="_blank">Gmail</a></li>
+      <li><a href="https://calendar.google.com" target="_blank">Google Agenda</a></li>
+    </ul>
+
+    <footer>
+      Gebaseerd op het design van Polestar.com
+    </footer>
+  </div>
 </body>
 </html>
