@@ -1,9 +1,9 @@
 /* style.css */
 :root {
-  --color-bg: #ffffff;
-  --color-text: #000000;
-  --color-accent: #ccc;
-  --color-hover: #f5f5f5;
+  --color-bg: #000;
+  --color-text: #fff;
+  --color-accent: #ff8000;
+  --color-subtle: #1a1a1a;
   --font-main: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -12,38 +12,51 @@ html, body {
   padding: 0;
   height: 100%;
   font-family: var(--font-main);
-  background: url('https://images.unsplash.com/photo-1618609481400-21b2f6ab0ef5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
-  background-size: cover;
+  background: var(--color-bg);
   color: var(--color-text);
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(4px);
-  z-index: -1;
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-subtle);
+  padding: 10px 20px;
+  font-size: 1.2rem;
+}
+
+.icon {
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+.icon.active {
+  opacity: 1;
+  color: var(--color-accent);
+}
+
+.time {
+  font-size: 1rem;
+  opacity: 0.7;
 }
 
 .container {
   max-width: 600px;
   margin: 0 auto;
-  padding: 80px 20px;
+  padding: 60px 20px;
   text-align: center;
 }
 
 h1 {
   font-weight: 300;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   margin-bottom: 0.2em;
 }
 
 p.subtitle {
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 2.5em;
+  font-size: 1rem;
+  color: #aaa;
+  margin-bottom: 2em;
 }
 
 ul.links {
@@ -60,22 +73,20 @@ ul.links a {
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
-  padding: 14px 20px;
+  padding: 16px 24px;
   text-decoration: none;
   color: var(--color-text);
-  border: 1px solid var(--color-accent);
-  border-radius: 8px;
-  background-color: #ffffffdd;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  background-color: var(--color-subtle);
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
 }
 
 ul.links a:hover {
-  background-color: var(--color-hover);
-  transform: translateY(-2px);
+  background-color: #222;
 }
 
 footer {
-  margin-top: 80px;
-  font-size: 0.85rem;
-  color: #888;
+  margin-top: 60px;
+  font-size: 0.8rem;
+  color: #666;
 }
