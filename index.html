@@ -1,14 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 <head>
-  <title>Mijn Startpagina</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Startpagina</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 300;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #aaaaaa;
+      margin-bottom: 40px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    li {
+      margin: 15px 0;
+    }
+
+    a {
+      display: block;
+      text-decoration: none;
+      color: #ffffff;
+      background-color: #1e1e1e;
+      padding: 15px 20px;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    a:hover {
+      background-color: #2a2a2a;
+      transform: scale(1.02);
+    }
+
+    footer {
+      margin-top: auto;
+      color: #555;
+      font-size: 0.9rem;
+      padding: 40px 0 10px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welkom!</h1>
+  <h1>Welkom</h1>
+  <p>Jouw persoonlijke startpagina</p>
+
   <ul>
-    <li><a href="https://nu.nl">Nieuws</a></li>
-    <li><a href="https://gmail.com">Gmail</a></li>
-    <li><a href="https://calendar.google.com">Agenda</a></li>
+    <li><a href="https://www.nu.nl" target="_blank">NU.nl – Nieuws</a></li>
+    <li><a href="https://www.gmail.com" target="_blank">Gmail</a></li>
+    <li><a href="https://calendar.google.com" target="_blank">Google Agenda</a></li>
+    <!-- Voeg hier je eigen links toe -->
   </ul>
+
+  <footer>
+    Gemaakt voor jouw Polestar browser
+  </footer>
 </body>
 </html>
