@@ -7,20 +7,31 @@
   --font-main: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-body {
+html, body {
   margin: 0;
   padding: 0;
-  background-color: var(--color-bg);
-  color: var(--color-text);
+  height: 100%;
   font-family: var(--font-main);
-  font-size: 16px;
-  line-height: 1.6;
+  background: url('https://images.unsplash.com/photo-1618609481400-21b2f6ab0ef5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+  background-size: cover;
+  color: var(--color-text);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(4px);
+  z-index: -1;
 }
 
 .container {
-  max-width: 960px;
+  max-width: 600px;
   margin: 0 auto;
-  padding: 60px 20px;
+  padding: 80px 20px;
+  text-align: center;
 }
 
 h1 {
@@ -31,27 +42,30 @@ h1 {
 
 p.subtitle {
   font-size: 1.1rem;
-  color: #666;
+  color: #555;
   margin-bottom: 2.5em;
 }
 
 ul.links {
   list-style: none;
   padding: 0;
-  margin: 0;
-}
-
-ul.links li {
-  margin-bottom: 1.2em;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 ul.links a {
-  display: inline-block;
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
   padding: 14px 20px;
   text-decoration: none;
   color: var(--color-text);
   border: 1px solid var(--color-accent);
   border-radius: 8px;
+  background-color: #ffffffdd;
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
@@ -61,8 +75,7 @@ ul.links a:hover {
 }
 
 footer {
-  text-align: center;
   margin-top: 80px;
   font-size: 0.85rem;
-  color: #aaa;
+  color: #888;
 }
