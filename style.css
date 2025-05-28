@@ -102,15 +102,22 @@ ul.links a:hover {
   background-color: var(--color-subtle);
   border-radius: 6px;
   overflow: hidden;
-  border: 1px solid #222;
+  border: 1px solid #555;
   text-align: left;
   color: var(--color-text);
   text-decoration: none;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .card:hover {
   transform: scale(1.02);
+}
+
+.card:hover .title,
+.card:hover .subtitle,
+.card:active .title,
+.card:active .subtitle {
+  color: var(--color-accent);
 }
 
 .card img {
@@ -128,11 +135,13 @@ ul.links a:hover {
   font-size: 1rem;
   font-weight: 500;
   color: var(--color-text);
+  transition: color 0.2s ease;
 }
 
 .card .subtitle {
   font-size: 0.85rem;
   color: #aaa;
+  transition: color 0.2s ease;
 }
 
 footer {
